@@ -10,18 +10,16 @@ if [ -z "$py_file" ]; then
 fi
 
 # Generate the output file name
-output_file="${py_file}c"
+output_file="${py_file%.*}.pyc"
 
 # Compile the Python script
 python3 -m py_compile "$py_file"
 
 # Check if the compilation was successful
 if [ $? -eq 0 ]; then
-    echo "Successfully compiled $py_file to $output_file"
+    echo "Compiling $py_file ..."
+    echo "Successfully compiled $py_file to $output_file."
 else
-    echo "Error compiling $py_file"
+    echo "Error compiling $py_file."
     exit 1
 fi
-
-exit 0
-
