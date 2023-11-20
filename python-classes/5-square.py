@@ -54,7 +54,7 @@ class Square:
             else:
                 self.__size = value
 
-   def my_print(self):
+    def my_print(self):
         """prints the square
 
         Returns:
