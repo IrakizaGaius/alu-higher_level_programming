@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''A module containing a locked class'''
+
+
 class LockedClass:
     """A locked class that only lets the user dynamically create the instance
     attribute 'first_name'"""
